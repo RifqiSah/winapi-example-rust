@@ -1,12 +1,10 @@
 use std::*;
 use std::ffi::CString;
+
 use windows::Win32::Foundation::{CloseHandle, GENERIC_READ, HANDLE};
-use windows::Win32::Storage::FileSystem::{
-    CreateFileA, ReadFile, SetFilePointerEx, FILE_BEGIN, FILE_FLAGS_AND_ATTRIBUTES, FILE_SHARE_READ, OPEN_EXISTING
-};
+use windows::Win32::Storage::FileSystem::{CreateFileA, ReadFile, SetFilePointerEx, FILE_BEGIN, FILE_FLAGS_AND_ATTRIBUTES, FILE_SHARE_READ, OPEN_EXISTING};
 use windows::Win32::System::Diagnostics::Debug::IMAGE_NT_HEADERS64;
 use windows::Win32::System::SystemServices::IMAGE_DOS_SIGNATURE;
-
 use windows::core::PCSTR;
 
 #[repr(C)]

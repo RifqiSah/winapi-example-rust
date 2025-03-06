@@ -1,6 +1,7 @@
+use std::ffi::CString;
+
 use windows::Win32::UI::WindowsAndMessaging::{MessageBoxA, MB_OK, MB_ICONINFORMATION};
 use windows::core::PCSTR;
-use std::ffi::CString;
 
 fn main() {
     let title = CString::new("Rust MessageBox").unwrap();
