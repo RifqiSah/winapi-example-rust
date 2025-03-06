@@ -1,2 +1,3 @@
 [workspace]
-members = ["messagebox", "pefile"]
+members = ["messagebox", "pefile", "process"]
+resolver = "2"

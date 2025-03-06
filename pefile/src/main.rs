@@ -37,8 +37,7 @@ fn main() {
     let path = CString::new("C:\\Windows\\System32\\notepad.exe").unwrap(); // Ganti dengan file lain jika perlu
 
     unsafe{
-        let h_file: HANDLE = CreateFileA(
-        PCSTR(path.as_bytes_with_nul().as_ptr()), GENERIC_READ.0, FILE_SHARE_READ, None, OPEN_EXISTING, FILE_FLAGS_AND_ATTRIBUTES(0), HANDLE(0)).expect("Cannot open file");
+        let h_file: HANDLE = CreateFileA(PCSTR(path.as_bytes_with_nul().as_ptr()), GENERIC_READ.0, FILE_SHARE_READ, None, OPEN_EXISTING, FILE_FLAGS_AND_ATTRIBUTES(0), HANDLE(0)).expect("Cannot open file");
 
         let mut dos_header = IMAGE_DOS_HEADER::default();
         let mut bytes_read: u32 = 0;
